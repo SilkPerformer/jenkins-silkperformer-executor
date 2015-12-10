@@ -1,0 +1,24 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry >
+        If this is the first time the plugin gets loaded, please add the project location and save the configuration. <b>Don't just apply it! </b>
+        <br />
+        After that you can go ahead and fill in the succes criterias. They only appear if the project file location is set. <br /> 
+        It is recommended to not change the project location afterwards. <br />
+    </f:entry>
+    <f:entry title="Project File Location" field="projectLoc">
+        <f:textbox />
+    </f:entry>
+    <j:set var="workspaceLoc" value="${it.getWorkspace().getRemote()}"/>
+    <j:if test="${instance.projectLoc != ''}">
+        <j:if test="${instance.projectLoc != null}">
+            <j:set var="errMsg" value="${descriptor.fillListBuilder(workspaceLoc, instance.projectLoc)}"/>
+            <j:if test="${errMsg != ''}">
+                <font color="red"><b>Error! </b>${errMsg}</font>
+            </j:if>            
+            <f:entry title="Success Criterias:">
+                <f:repeatableProperty field="successCriteria" add="Add Success Criteria" noAddButton="false" header="Success Criteria: "/>
+            </f:entry>
+        </j:if>
+    </j:if>
+</j:jelly>

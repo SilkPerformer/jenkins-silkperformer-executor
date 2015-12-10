@@ -1,0 +1,29 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry field="userType" title="User Type:">
+        <f:select />
+    </f:entry>
+    <f:entry field="transactionName" title="Transaction Name:">
+        <f:select />
+    </f:entry>  
+    <f:entry field="measureType" title="Measure Type:">
+        <f:select />
+    </f:entry>
+    <f:entry field="measureName" title="Measure Name:">
+        <f:textbox />
+    </f:entry>
+    <f:entry field="valueType" title="Value Type:">
+        <f:select />
+    </f:entry>
+    <f:entry field="operatorType" title="Operator:">
+        <f:select />
+    </f:entry>
+    <f:entry field="chosenValue" title="Value:">
+        <f:textbox />
+    </f:entry>
+    <f:entry title="">
+        <div align="right">
+            <f:repeatableDeleteButton />
+        </div>
+    </f:entry>
+</j:jelly>
