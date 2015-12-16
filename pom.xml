@@ -10,11 +10,11 @@
         <relativePath/>
     </parent>
     <groupId>com.borland.jenkins</groupId>
-    <artifactId>SilkPerformerJenkins</artifactId>
+    <artifactId>silk-performer-plugin</artifactId>
     <version>1.0</version>
     <packaging>hpi</packaging>
 
-    <name>Silk Performer Executor</name>
+    <name>Silk Performer Plugin</name>
     <description>Allows to execute Silk Performer load tests via Jenkins and validate success criteria</description>
     <licenses>
         <license>
