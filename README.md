@@ -1,6 +1,6 @@
 # jenkins-silkperformer-executor
 
-This script allows you to run a Silk Performer script from Jenkins.
+This script allows you to run a Silk Performer load test from Jenkins.
 
 ###Developer instructions:
 * add a JDK to the installed JREs in Eclipse <br>
